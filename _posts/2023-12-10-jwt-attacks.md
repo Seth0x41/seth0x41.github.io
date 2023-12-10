@@ -391,7 +391,6 @@ These were the most common JWT attacks, and there are more misconfigurations you
 | **-**                   | 33    |
 
 <br />
-<br />
 
 The weakness in validation is due to applications not adequately checking the provided token. Most attackers exploit this by altering the role or ID, allowing them to bypass access control or carry out IDOR attacks.
 

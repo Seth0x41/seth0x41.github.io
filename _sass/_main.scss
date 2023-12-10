@@ -761,6 +761,16 @@ $link-color: var(--link-color);
   }
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #705c5c;
+  padding: 8px;
+  text-align: center; /* Center the content */
+}
 
 
 .time-wrapper {
