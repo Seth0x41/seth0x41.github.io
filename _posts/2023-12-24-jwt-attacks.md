@@ -9,7 +9,7 @@ tags: security
 
 JSON Web Token (JWT) is a standard that provides a secure way to transmit information between systems as a JSON object. It is mostly used for handling  authorization and information Exchange purposes in web applications. Due to its sensitive and crucial usage, it is important to implement it carefully, as any misconfiguration can lead to serious problems that may disrupt the authorization or Information Exchange functionality. In this Article, I will outline the most common attacks on JWT tokens, reviewing those reported by bug bounty hunters in their write-ups. Additionally, I will provide some advice on preventing such attacks within your application.
 
-## Structure of JWT and How it works
+## Structure of JWT
 
 A JWT token consists of 3 base64 encoded parts:
 
@@ -422,7 +422,7 @@ Concerning information disclosure via JWT, the sole report I found described an 
 
 # Resources
 
-https://portswigger.net/web-security/jwt \
+[JWT attacks - portswigger](https://portswigger.net/web-security/jwt) \
 [JSON Web Token Introduction - jwt.io](https://jwt.io/introduction)\
 [JSON Web Token (JWT) Attacks - Web Security (gitbook.io)](https://aufzayed.gitbook.io/web-apps-security/authentication-almsadqh/json-web-token-jwt-attacks)\
 [JSON Web Token Vulnerabilities - Application Security Cheat Sheet (gitbook.io)](https://0xn3va.gitbook.io/cheat-sheets/web-application/json-web-token-vulnerabilities)\
