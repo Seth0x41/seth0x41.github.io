@@ -12,14 +12,14 @@ layout: default
   </div>
 </section>
 <br>
-<h1 style="text-align: center;">My Learning Journey </h1>
+<h1 style="text-align: center;">Today I Learned ⭛</h1>
 
 <section>
     <!-- The Timeline -->
     <ul class="timeline">
         {% for post in site.posts %}
           <li>
-            <div class="{% cycle 'direction-l', 'direction-r' %}">
+            <div class="{% cycle 'direction-r', 'direction-l' %}">
                 <div class="flag-wrapper">
                 <a class="flag" href="{{ post.url }}">{{ post.title }}</a>
                 <span class="time-wrapper"><span class="time">{{ post.date | date: "%b %d, %Y" }}</span></span>
