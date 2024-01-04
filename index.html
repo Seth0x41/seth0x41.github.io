@@ -13,7 +13,9 @@ layout: default
 
         <p>
             <br>
-	    <a href="{{ site.url }}{{ site.baseurl }}/about/">> About me</a>
+            <a href="{{ site.url }}{{ site.baseurl }}/about/">> About me 🤓</a>
+            <br>
+            <a href="{{ site.url }}{{ site.baseurl }}/today/">> Daily Learning Notes 📄</a>
         </p>
     </div>
 
@@ -38,13 +40,15 @@ layout: default
 </div>
 
 <section class="posts" id="Blog">
-    <h2>BLOG</h2>
+    <h2>Articles</h2>
+
+
     <ul>
-        {% for post in site.posts %}
-        <li>
-		<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
-        </li>
+        {% for article in site.articles %}
+          <li>
+            <a href="{{ article.url }}">{{ article.title }}</a>
+            <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%b %d, %Y" }}</time>
+          </li>
         {% endfor %}
-    </ul>
+      </ul>
 </section>
