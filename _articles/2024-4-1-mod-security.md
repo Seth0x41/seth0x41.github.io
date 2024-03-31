@@ -33,7 +33,7 @@ On the open-source side, you'll find options like ModSecurity, Coraza, Open-apps
 
 ## Small-Mid companies and Side projects
 
-Given the high cost of WAFs for side projects and small to mid-sized companies, the optimal choice to increase the security of your application is using open-source WAF. In this article, we will install ModSecurity Firewall with the Nginx server and configure it with the OWASP ModSecurity Core Rule Set. After that, we will install the fail2ban tool to protect against rate-limiting attacks. At the end of this article, we will test these rules.
+Given the high cost of WAFs for side projects and small to mid-sized companies, the optimal choice to increase the security of your application is using open-source WAF. In this article, we will install ModSecurity Firewall with the Nginx server and configure it with the OWASP ModSecurity Core Rule Set.
 
 
 # ModSecurity Firewall
