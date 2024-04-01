@@ -11,16 +11,14 @@
   {% if page.thumbnail %}
     <meta name="twitter:image" content="{{ page.thumbnail | prepend: site.baseurl | absolute_url }}">
   {% endif %}
-  
+
   <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:description" content="{{ page.description }}">
-  {% if page.thumbnail %}
-    <meta property="og:image" content="{{ page.thumbnail | prepend: site.baseurl | absolute_url }}">
-  {% endif %}
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  
-  <meta name="author" content="{{ site.author.name }}">
-  
+<meta property="og:description" content="{{ page.description }}">
+{% if page.thumbnail %}
+  <meta property="og:image" content="{{ page.thumbnail | prepend: site.baseurl | absolute_url }}">
+{% endif %}
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+
   <title>
       {% if page.tag or page.title %}
         {% if page.tag %}
