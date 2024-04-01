@@ -6,14 +6,21 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  {% if page.thumbnail %}
+    <meta name="twitter:image" content="{{ page.thumbnail | prepend: site.baseurl | absolute_url }}">
+  {% endif %}
+  
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:description" content="{{ page.description }}">
   {% if page.thumbnail %}
     <meta property="og:image" content="{{ page.thumbnail | prepend: site.baseurl | absolute_url }}">
-  {% else %}
-    <meta property="og:image" content="https://www.placecage.com/c/460/300">
   {% endif %}
-  <meta property="og:url" content="{{ page.url | absolute_url }}">  
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  
+  <meta name="author" content="{{ site.author.name }}">
+  
   <title>
       {% if page.tag or page.title %}
         {% if page.tag %}
