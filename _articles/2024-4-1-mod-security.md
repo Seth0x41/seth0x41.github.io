@@ -2,6 +2,7 @@
 layout: post
 title: Secure Your Deployed App with an Open-Source WAF
 description: In this article, we discuss WAFs and guide you through setting up ModSecurity with Nginx and the OWASP Core Rule Set.
+thumbnail: "/photos/mod_security/image-20240115005213.png"
 tags: security
 ---
 
