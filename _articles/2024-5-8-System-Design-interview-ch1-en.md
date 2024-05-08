@@ -6,6 +6,7 @@ thumbnail: "/photos/mod_security/image-20240115005213.png"
 tags: SoftwareEngineering
 ---
 
+> Remember to pray for [Ahmed Magdy](https://twitter.com/Lynguist_0)
 
 The first chapter begins by stating that designing a scalable system to serve millions of users is a challenging task. The process of designing such a system always requires continuous refinement and development; it's not something you do once and forget about it. Throughout this chapter, we will start with a system that serves a single user, and then gradually scale it up.
 # Single server setup
@@ -85,12 +86,12 @@ Now, what are the considerations when we use caching?
 3. Consistency is an important aspect when using caching because you need to keep the cache and your data store synchronized. This becomes challenging when scaling across multiple regions because there is no single transaction that can modify both the cache and the data store simultaneously.
 4. Always beware of the SPOF (single point of failure), which means that if one part of your system fails, the entire system will stop. That's why it's recommended to use multiple cache servers in multiple data centers or to allocate a certain percentage of memory beyond what you need as a reserve in case the memory gets filled up.
 
-![\photos\System-Design-interview-ch1-en\image-20240508072303.png](\photos\System-Design-interview-ch1-en\image-20240508072303.png)
-
 5. It's crucial to consider the Eviction Policy because once the cache is full, it starts evicting or removing items from your cache. There are several methods for cache eviction. 
-	1. The most common one is the Least Recently Used (LRU), where the data least recently accessed is removed from the cache.
-	2. Additionally, there's the Least Frequently Used (LFU), where the data accessed the fewest number of times is removed. 
-	3. Furthermore, there's the First In First Out (FIFO), where data is removed based on the order it was inserted into the cache, similar to a queue.
+- The most common one is the Least Recently Used (LRU), where the data least recently accessed is removed from the cache.
+- Additionally, there's the Least Frequently Used (LFU), where the data accessed the fewest number of times is removed. 
+- Furthermore, there's the First In First Out (FIFO), where data is removed based on the order it was inserted into the cache, similar to a queue.
+
+![\photos\System-Design-interview-ch1-en\image-20240508072303.png](\photos\System-Design-interview-ch1-en\image-20240508072303.png)
 
 # CDN
 
@@ -174,8 +175,6 @@ There are criteria you should consider when choosing the key, as the author ment
 3. Join and de-normalization: Once your database is divided across multiple servers, it becomes challenging to perform join operations between the database shards. The common workaround is to denormalize the database, which means combining related tables into a single table, making queries more efficient.
 
 # The End
-> Remember to pray for Ahmed Magdy
-
 And thus we have reached the end of the chapter, and we've arrived at the design in front of you. Next time, we'll continue with the rest of the chapters, and I hope if there's anything I misunderstood, you'll correct me.
 
 ![\photos\System-Design-interview-ch1-en\image-20240508080335.png](\photos\System-Design-interview-ch1-en\image-20240508080335.png)
