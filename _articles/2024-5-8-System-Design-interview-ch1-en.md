@@ -2,7 +2,7 @@
 layout: post
 title: System Design Intervew | Chapter 1 | En
 description: Scale from zero to millions of users.
-thumbnail: "/photos/mod_security/image-20240115005213.png"
+thumbnail: "\photos\System-Design-interview-ch1-en\image-20240508064806.png"
 tags: SoftwareEngineering
 ---
 
