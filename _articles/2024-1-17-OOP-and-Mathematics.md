@@ -4,6 +4,8 @@ title: A Personal View on Math and OOP Similarities
 description: In this article, we explore the parallels between mathematical spaces and object-oriented programming (OOP) concepts, offering insights into how vector spaces, encapsulation, inheritance, abstraction, and polymorphism relate to programming principles.
 thumbnail: "/photos/mod_security/image-20240115005213.png"
 tags: software_engineering mathematics
+usemathjax: true
+
 ---
 
 
@@ -21,20 +23,24 @@ In mathematics, you might have used vectors without knowing the conditions of a 
 Check this video for a better understanding of this point if you're interested: [The Mathematician's Weapon](https://www.youtube.com/watch?v=FQYOpD7tv30)
 
 Lastly, polymorphism: In vector spaces, you can perform an operation like addition on real numbers and complex numbers, but the implementation can be different. For example:
-For real numbers in R^2
+For real numbers in $$R^2$$
 
-u=(1,2,3), v=(4,5,6)\\
-u+v=(5,7,9)
+$$
+\displaylines{u=(1,2,3),\quad v=(4,5,6)\\ u+v=(5,7,9)}
+$$
 
-For complex numbers in  C^2
 
-u= (1+2i,4−i)\\
-v= (−1,4i)
+For complex numbers in  $$C^2$$
 
-u+v=\\
+$$
+\displaylines{u= (1+2i,4−i), \quad v= (−1,4i)\\
+u+v=
 (1+2i)+(−1)=1+2i−1=2i \\
 (4−i)+4i=4−i+4i=4+3i\\
 =(2i,4+3i)
+}$$
+
+
 
 The method of implementation will be different because of the imaginary part. Thus, the approach will be different for real numbers and complex numbers, although they both use the addition method but in different forms.\\
 In the end, this is my perspective on the topic. There might be more detailed principles for class creation and interaction that I can relate to topics studied in math, but I hope I conveyed the general idea. If I'm mistaken about anything in math or CS, please correct me.
