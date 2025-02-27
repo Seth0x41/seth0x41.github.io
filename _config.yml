@@ -4,14 +4,14 @@ greetings: Hello there! 👋
 description: >-
   Blogging about Software Engineering and Cyber Security.
 lang: en-US
-timezone:  Africa/Cairo
+timezone: Africa/Cairo
 data-theme: dark # default theme "dark" | "light"
-discus-identifier:  # replace with your disqus shortname
+discus-identifier: # replace with your disqus shortname
 comments-enabled: false # true to enable disqus comments, false to hide them
 author:
   name: seth0x41
   bio: 🥱
-  userpicture: 
+  userpicture:
   username: seth0x41 # general username
   github: seth0x41 # github username
   twitter: seth0x41 # twitter username
@@ -19,7 +19,7 @@ author:
   linkedin: seth0x41 # linkedin profile
   email: Sec.MahmoudAlarby@email.com # email adress
   telegram: seth0x41
-  reading: Black Hat Graphql
+  reading: [" Spring in Action"]
 # Font Settings
 googlewebfonts: family=Play:wght@400;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900
 
@@ -29,15 +29,13 @@ baseurl: "" # sub folder for jekyll site. only if jekyll site not in root of hos
 permalink: pretty
 
 # local
-# url: "http://localhost:4000" # 
-# baseurl: "" # 
-
+# url: "http://localhost:4000" #
+# baseurl: "" #
 
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
 
 exclude:
   - .jekyll-cache
@@ -47,7 +45,7 @@ exclude:
   - LICENSE.md
   - README.md
   - CONTRIBUTING.md
-  
+
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
@@ -71,28 +69,23 @@ collections:
   articles:
     output: true
     permalink: /:year/:month/:day/:slug
-  
+
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
 
 relative_links:
-  enabled:     true
+  enabled: true
   collections: false
-
-
