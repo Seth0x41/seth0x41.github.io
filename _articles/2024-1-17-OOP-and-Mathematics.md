@@ -3,7 +3,7 @@ layout: post
 title: A Personal View on Math and OOP Similarities
 description: In this article, we explore the parallels between mathematical spaces and object-oriented programming (OOP) concepts, offering insights into how vector spaces, encapsulation, inheritance, abstraction, and polymorphism relate to programming principles.
 thumbnail: "/photos/mod_security/image-20240115005213.png"
-tags: software_engineering mathematics
+tags: ["Software Engineering","mathematics","OOP"]
 usemathjax: true
 
 ---

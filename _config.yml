@@ -70,6 +70,7 @@ collections:
     output: true
     permalink: /:year/:month/:day/:slug
 
+
 defaults:
   - scope:
       path: ""

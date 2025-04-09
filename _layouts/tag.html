@@ -2,34 +2,31 @@
 layout: default
 ---
 
-
-
 <section class="posts">
   <div class="flex-row-between">
-    <h1>Tag #{{page.tag}}</h1>
+    <h1>Tag: {{ page.tag }}</h1>
     <a href="{{ site.url }}{{ site.baseurl }}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
   </div>
   <ul>
-    {% for post in site.posts %}
-    {% if post.tags contains page.tag %}
-    <li><a class="post" href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a><time
-        datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time></li>
-    {% endif %}
+    {% for post in site.articles %}
+      {% if post.tags contains page.tag %}
+        <li>
+          <a class="post" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
 </section>
 
 <section class="tags">
-  <h2>All tags:</h2>
-  {% assign tags = site.tags | sort %}
-  {% for tag in tags %}
+  <h2>All Tags:</h2>
   <ul>
-    <li>
-	    <a class="posts" href="{{ site.url }}{{ site.baseurl }}/tag/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' '
-        }} ({{ tag | last | size
-        }}){% unless forloop.last %}, {% endunless %}
-      </a>
-    </li>
+    {% assign all_tags = site.articles | map: "tags" | flatten | uniq | sort %}
+    {% for tag in all_tags %}
+      <li>
+        <a class="tag-link" href="{{ site.baseurl }}/tag/{{ tag  }}">{{ tag }} ({{ site.articles | where_exp: "post", "post.tags contains tag" | size }}){% unless forloop.last %},{% endunless %}</a>
+      </li>
+    {% endfor %}
   </ul>
-  {% endfor %}
 </section>
