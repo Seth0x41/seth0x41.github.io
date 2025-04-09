@@ -78,6 +78,10 @@
   />
   {% endif %}
 
+  {% if page.direction == "rtl" %}
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
+{% endif %}
+
   <style>
     {% capture include_to_scssify %}
       {% include inline.scss %}
