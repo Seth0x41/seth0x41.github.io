@@ -179,5 +179,5 @@ And thus we have reached the end of the chapter, and we've arrived at the design
 
 ![\photos\System-Design-interview-ch1-en\image-20240508080335.png](\photos\System-Design-interview-ch1-en\image-20240508080335.png)
 
-> Note: This article has been translated by ChatGPT from the original Arabic article. If you notice any mistakes, please inform me.
+> Note: This article has been translated by AI from the original Arabic article. If you notice any mistakes, please inform me.
 

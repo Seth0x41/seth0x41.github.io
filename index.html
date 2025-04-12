@@ -41,13 +41,14 @@ layout: default
 <section class="posts" id="Blog">
     <h2>Articles</h2>
 
-
     <ul>
         {% for article in site.articles %}
-          <li>
-            <a href="{{ article.url }}">{{ article.title }}</a>
-            <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%b %d, %Y" }}</time>
-          </li>
+          {% if article.lang != "ar" and article.is_chapter != true %}
+            <li>
+              <a href="{{ article.url }}">{{ article.title }}</a>
+              <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%b %d, %Y" }}</time>
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
 </section>

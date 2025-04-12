@@ -165,6 +165,133 @@ body {
 	color: var(--main-text-color);
 }
 
+/* Selectors container for language and chapter dropdowns */
+.selectors-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 8px;
+  
+  /* When both selectors are present, add some visual separation */
+  .language-select-wrapper + .chapter-select-wrapper {
+    margin-left: 10px;
+  }
+  
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
+    
+    /* Stack selectors vertically on small screens */
+    .language-select-wrapper, .chapter-select-wrapper {
+      margin: 4px 0;
+    }
+    
+    .language-select-wrapper + .chapter-select-wrapper {
+      margin-left: 0;
+      margin-top: 8px;
+    }
+  }
+}
+
+/* Language Selector Styles - with RTL fixes */
+.language-select-wrapper, .chapter-select-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 3px; /* Reduce side margins since container has margin */
+  position: relative;
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate !important;
+  isolation: isolate;
+  
+  svg {
+    position: absolute;
+    left: 10px !important;
+    right: auto !important;
+    z-index: 2;
+    color: var(--medium-text-color);
+    pointer-events: none;
+    height: 1.4em;
+    width: 1.4em;
+  }
+		
+  .language-select, .chapter-select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 8px 12px 8px 36px !important;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--main-text-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+    min-width: 120px;
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: isolate !important;
+    
+    &:hover {
+      color: var(--link-color);
+    }
+    
+    &:focus {
+      outline: none;
+    }
+    
+    option {
+      font-weight: normal;
+      font-size: 1rem;
+      background-color: rgb(255, 255, 255);
+      direction: ltr !important;
+      text-align: left !important;
+      unicode-bidi: isolate !important;
+      padding-left: 8px !important;
+    }
+  }
+}
+
+/* Chapter selector specific styles */
+.chapter-select-wrapper {
+  margin-left: 0;
+  
+  .chapter-select {
+    min-width: 180px; /* Wider to fit chapter titles */
+  }
+}
+
+html[data-theme="dark"] {
+  .language-select-wrapper, .chapter-select-wrapper {
+    svg {
+      color: var(--very-light-text-color);
+    }
+    
+    .language-select, .chapter-select {
+      background-color: transparent;
+      color: var(--very-light-text-color);
+      
+      &:hover {
+        color: var(--link-color);
+      }
+      
+      option {
+        background-color: rgb(19, 20, 24);
+        color: var(--very-light-text-color);
+      }
+    }
+  }
+}
+
+/* Remove old language switcher styles */
+.language-switcher {
+  display: none;
+}
+
+.language-dropdown {
+  display: none;
+}
+
 a {
 	color: var(--link-color);
 	text-decoration: none;
@@ -390,6 +517,19 @@ main {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+}
+
+/* Back link styles - should follow page direction */
+.back-link {
+  display: flex;
+  align-items: center;
+}
+
+/* Theme toggle wrapper - fixed LTR */
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  direction: ltr;
 }
 
 .social-footer {
@@ -825,3 +965,4 @@ th, td {
     
   }
 }
+
