@@ -3,7 +3,7 @@ layout: post
 title: "Object Orientation"
 date: 2025-04-09
 lang: en
-tags: ["Software-Engineering","OOP"]
+tags: ["Software Engineering","OOP"]
 lang_versions:
   en: /2025/04/09/object-orientaion-en  # Path to English version
   ar: /2025/04/09/object-orientaion-ar  # Path to Arabic version
