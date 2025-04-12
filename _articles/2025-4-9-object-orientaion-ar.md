@@ -4,7 +4,6 @@ title: "Object Orientation"
 date: 2025-04-09
 direction: rtl
 lang: ar
-tags: ["Software Engineering","OOP"]
 lang_versions:
   en: /2025/04/09/object-orientaion-en  
   ar: /2025/04/09/object-orientaion-ar 
