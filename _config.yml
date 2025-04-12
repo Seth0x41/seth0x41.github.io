@@ -30,6 +30,24 @@ baseurl: "" # sub folder for jekyll site. only if jekyll site not in root of hos
 # Canonical URL - ensures proper redirects
 canonical_url: true
 
+# SEO settings
+title: "seth0x41"
+description: "Blogging about Software Engineering and Cyber Security."
+author:
+  name: seth0x41
+  bio: 🥱
+  twitter: seth0x41
+  github: seth0x41
+  linkedin: seth0x41
+
+# Jekyll SEO tag settings
+social:
+  name: seth0x41
+  links:
+    - https://twitter.com/seth0x41
+    - https://www.linkedin.com/in/seth0x41
+    - https://github.com/seth0x41
+
 # Local development settings
 # url: "http://localhost:4000" # Uncomment for local development
 # baseurl: "" # Uncomment for local development

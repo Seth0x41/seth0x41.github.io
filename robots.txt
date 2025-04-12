@@ -1,2 +1,3 @@
 User-agent: *
-Sitemap: {{ site.url }}/sitemap.xml
+Allow: /
+Sitemap: https://seth0x41.tech/sitemap.xml

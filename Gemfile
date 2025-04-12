@@ -11,3 +11,5 @@ gem 'wdm', '>= 0.1.0'
 
 # update ruby version
 gem 'webrick'
+
+gem "jekyll-seo-tag", "~> 2.8"

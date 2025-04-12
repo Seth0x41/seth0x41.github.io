@@ -66,6 +66,40 @@ layout: default
     <a href="{{ site.url }}{{ site.baseurl }}/tag/{{tag}}">{{tag}}</a>{% unless forloop.last %}, {% endunless %}{%
     endfor %}</span>
   {{ content }}
+  
+  <!-- Schema.org structured data for articles -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "url": "{{ page.url | absolute_url }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.date | date_to_xmlschema }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author.name }}",
+      "url": "{{ site.url }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/favicon.png' | absolute_url }}"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }{% if page.thumbnail %},
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ page.thumbnail | prepend: site.baseurl | absolute_url }}"
+    }{% endif %}
+  }
+  </script>
 </section>
 
 <section>

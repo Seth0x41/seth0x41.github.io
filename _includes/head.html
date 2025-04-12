@@ -40,6 +40,8 @@
   {% endif %}
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
 
+  {% seo title=false %}
+  
   <title>
     {% if page.tag or page.title %} {% if page.tag %} {{ page.tag | escape }} {%
     else %} {{ page.title | escape }} {% endif %} - {% endif %} {% if paginator
