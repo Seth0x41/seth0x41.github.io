@@ -104,16 +104,35 @@ layout: default
 
 <section>
   <nav class="post-nav">
-    {% if page.previous %}
-    <a class="post-nav-item post-nav-prev" href="{{ page.previous | relative_url }}">
+    {% assign filtered_articles = site.articles | sort: 'date' %}
+    
+    {% assign prev_article = null %}
+    {% assign next_article = null %}
+    
+    {% for article in filtered_articles %}
+      {% if article.lang != "ar" and article.is_chapter != true %}
+        {% if article.date < page.date and prev_article == null %}
+          {% assign prev_article = article %}
+        {% endif %}
+        
+        {% if article.date > page.date and next_article == null %}
+          {% assign next_article = article %}
+          {% break %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if prev_article %}
+    <a class="post-nav-item post-nav-prev" href="{{ prev_article.url | relative_url }}">
       <div class="nav-arrow">Previous</div>
-      <span class="post-title">{{ page.previous.title }}</span>
+      <span class="post-title">{{ prev_article.title }}</span>
     </a>
     {% endif %}
-    {% if page.next %}
-    <a class="post-nav-item post-nav-next" href="{{ page.next | relative_url }}">
+    
+    {% if next_article %}
+    <a class="post-nav-item post-nav-next" href="{{ next_article.url | relative_url }}">
       <div class="nav-arrow">Next</div>
-      <span class="post-title">{{ page.next.title }}</span>
+      <span class="post-title">{{ next_article.title }}</span>
     </a>
     {% endif %}
   </nav>
